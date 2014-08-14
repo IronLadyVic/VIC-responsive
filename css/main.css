@@ -1,0 +1,760 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*all devices*/
+/*//start mobile phone styling first*/
+body{
+    display: flex;
+}
+
+/*----------------left container------------------------*/
+.left-container{
+    flex-basis: 10em;
+    width: 25%;
+
+    /*flex-basis: 10em;*/
+}
+
+#logo{
+    margin-left: .5em;
+}
+
+#contact{
+    margin-left: 0.5em;
+    margin-top: 1em;
+    font-size: 2em;
+    width: 10em;
+}
+
+/*//form*/
+
+form{
+  width: 30em;
+}
+#loginForm{
+    background: white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+span{
+    cursor: pointer;
+}
+
+#background{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1000;
+    background-color:rgba(0,0,0,0.5);
+    display: none;
+}
+.pure-form label {
+ /*   margin: 1em 0 0;*/
+
+    font-weight: bold;
+    font-size: 100%;
+}
+.pure-form input{
+  text-indent: 0.5em;
+
+}
+textarea{
+  width: 99%;
+  position: absolute;
+  margin-top: 1.5em;
+  margin-left: -8.2em;
+  text-indent: 0.5em;
+}
+
+
+
+.pure-form input[type] {
+    border: 2px solid #ddd;
+    box-shadow: none;
+    font-size: 100%;
+    width: 100%;
+    margin-bottom: 1em;
+
+}
+
+/*
+ * -- PURE BUTTON STYLES --
+ * I want my pure-button elements to look a little different
+ */
+.pure-button {
+    background-color: #1f8dd6;
+    color: white;
+    padding: 0.5em 2em;
+    border-radius: 5px;
+}
+
+a.pure-button-primary {
+    background: white;
+    color: #1f8dd6;
+    border-radius: 5px;
+    font-size: 120%;
+}
+/*//end of form*/
+
+#nav-list{
+
+    margin-left: -2.5em;
+}
+.about a{
+    background-color: black;
+    color: white;
+    padding-left: 1em;
+    padding-right: 3em;
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+    transition: padding-right 0.5s ease;
+}
+.about a:hover{
+    background-color: black;
+    color: white;
+    padding-left: 1em;
+    padding-right: 6em;
+    text-decoration: none;  
+}
+.work a{
+    background-color: #C2E6E6;
+    color: #222222;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+    transition: padding-right 0.5s ease;
+}
+.work a:hover{
+    background-color: #C2E6E6;
+    color: #222222;
+    padding-left: 1em;
+    padding-right: 6em;
+    text-decoration: none;
+   
+}
+.experience a{
+    background-color: #C2E6E6;
+    color: #222222;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+    transition: padding-right 0.5s ease;
+}
+.experience a:hover{
+    background-color: #C2E6E6;
+    color: #222222;
+    padding-left: 1em;
+    padding-right: 3.8em;
+    text-decoration: none;
+ 
+}
+.education a{
+    background-color: #999999;
+    color: #222222;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+    transition: padding-right 0.5s ease;
+}
+.education a:hover{
+    background-color: #999999;
+    color: #222222;
+    padding-left: 1em;
+    padding-right: 3.8em;
+    text-decoration: none;
+    
+}
+.post a{
+    background-color: #CCCCCC;
+    color: #222222;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+    transition: padding-right 0.5s ease;
+}
+.post a:hover{
+    background-color: #CCCCCC;
+    color: #222222;
+    padding-left: 1em;
+    padding-right: 3em;
+    text-decoration: none;
+
+}
+
+
+.contact a{
+    background-color: #EEEEEE;
+    color: #222222;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+    transition: padding-right 0.5s ease;
+}
+.contact a:hover{
+    background-color: #EEEEEE;
+    color: #222222;
+    padding-left: 1em;
+    padding-right: 3em;
+    text-decoration: none;
+
+}
+/*----------------right container------------------------*/
+
+
+
+.flex-container {
+  padding: 0;
+  margin-left: 7em;
+  list-style: none;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  
+}
+
+.wrap    { 
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}  
+.wrap li {
+  background: ;
+}
+
+.flex-item {
+  border-top: 1px solid #222222;
+  padding: 5px;
+  width: 10em;
+  height: 10.5em;
+  margin: 10px;
+  margin-left: -0.1em;
+  list-style-type: none;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+  position: relative;
+}
+
+
+.hover-item{
+  width: 10em;
+  padding-left: 0.1em;
+  
+  height: 11em;
+  background: transparent;
+  -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
+}
+
+.hover-item:hover {
+  background-color:rgba(194, 230, 230,0.7);
+  cursor: pointer;
+}
+.flex-item:nth-child(1){
+    order: 0;
+}
+
+.flex-item:nth-child(2){
+    order: 0;
+}
+
+.flex-item:nth-child(3){
+    order: 0;
+}
+.flex-item:nth-child(4){
+    order: 1;
+}
+.flex-item:nth-child(5){
+    order: 1;
+}
+.flex-item:nth-child(6){
+    order: 1;
+}
+.flex-item:nth-child(7){
+    order: 2;
+}
+.flex-item:nth-child(8){
+    order: 2;
+}
+.flex-item:nth-child(9){
+    order: 2;
+}
+.headers{
+    background-color: #C2E6E6;
+    color: #222222;
+    width: 4.0em;
+    height: 1.5em;
+    
+    margin-top: -0.5em;
+    font-size: 0.4em;
+}
+
+p {
+    font-size: 0.3em;
+}
+.tags{
+    margin-top: -0.5em;
+    margin-left: -3em;
+    width:110%;
+}
+.a-tags1{
+    margin-left: -11em;
+    margin-top: 5em;
+}
+.a-tags2{
+    margin-left: -2em;
+
+}
+.a-tags3{
+    margin-left: 9.5em;
+}
+a{
+    text-decoration: none;
+    color: #222222;
+    transition: color 0.5s ease;
+}
+ a:hover{   
+    text-decoration: none;
+    color: #B22222;
+    }
+/*}*/
+.sub-header{
+    width: 15em;
+    font-size: 0.7em;
+    color: black;
+    text-align: left;
+    margin-top: -0.4em;
+}
+.screen{
+  width: 100%;
+  height: 101%;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: black;
+  
+  color: white; text-shadow: black 0.1em 0.1em 0.2em;
+  font-size: 1em;
+
+  background-color:rgba(194, 230, 230,0.9);
+  transition: background-color 0.5s ease;
+  display: none;
+
+}
+li:hover .screen{
+  display: block;
+}
+
+
+button{
+  background-color: black;
+  color: white;
+  width: 2em;
+  height: 0.5em;
+  margin-left: 5.5em;
+  
+  border: none;
+}
+/*phaplet*/
+
+@media only screen and (min-width: 20em){
+#right-container1{
+    flex-grow:1;
+    ms-flex-grow:1;
+}
+.flex-container {
+  padding: 0;
+  
+  margin-left: 7em;
+  list-style: none;
+  
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+
+
+.wrap    { 
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}  
+.wrap li {
+  background: ;
+}
+
+.flex-item {
+  border-top: 1px solid #222222;
+  padding: 5px;
+  width: 10em;
+  height: 10.5em;
+  margin: 10px;
+  margin-left: -0.1em;
+  list-style-type: none;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+
+.flex-item:nth-child(3){
+    order: 0;
+}
+.flex-item:nth-child(4){
+    order: 0;
+}
+.flex-item:nth-child(5){
+    order: 0;
+}
+.flex-item:nth-child(6){
+    order: 0;
+}
+.flex-item:nth-child(7){
+    order: 0;
+}
+.flex-item:nth-child(8){
+    order: 0;
+}
+.flex-item:nth-child(9){
+    order: 0;
+}
+
+
+
+
+
+}
+
+/*tablet*/
+
+@media only screen and (min-width: 40em){
+
+}
+
+
+/*desktop*/
+
+@media only screen and (min-width: 60em){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
