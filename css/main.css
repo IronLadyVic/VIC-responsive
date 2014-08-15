@@ -106,8 +106,12 @@ body{
 /*----------------left container------------------------*/
 .left-container{
     flex-basis: 10em;
-    width: 25%;
-
+    width: 20em;
+    height: 100%;
+    z-index: 1000;
+    background-color: white;
+    /*outline: 1px solid red;*/
+    
     /*flex-basis: 10em;*/
 }
 
@@ -120,6 +124,8 @@ body{
     margin-top: 1em;
     font-size: 2em;
     width: 10em;
+     z-index: 1000;
+    background-color: white;
 }
 
 /*//form*/
@@ -312,6 +318,7 @@ a.pure-button-primary {
 
 .flex-container {
   padding: 0;
+  background-color: white;
   margin-left: 7em;
   list-style: none;
   -ms-box-orient: horizontal;
@@ -321,7 +328,8 @@ a.pure-button-primary {
   display: -moz-flex;
   display: -webkit-flex;
   display: flex;
-  
+  z-index: 1000;
+  height: 100%;
 }
 
 .wrap    { 
@@ -474,10 +482,7 @@ button{
 /*phaplet*/
 
 @media only screen and (min-width: 20em){
-#right-container1{
-    flex-grow:1;
-    ms-flex-grow:1;
-}
+
 .flex-container {
   padding: 0;
   

@@ -20,3 +20,25 @@ $("button").click(function(){
 
 
 });
+
+
+$(function(){
+
+	$(".contact").on("click",function(event){
+		event.preventDefault();
+
+		$("#background").show().animate({ width: "100%", height: "100%"},1000);
+		$("#loginForm").appendTo("#background");
+	});
+
+	$("#loginForm span[role='close-modal']").on("click",function(){
+		$("#background").animate({width: "100%", height: "100%"},2000,function(){
+			$(this).hide();
+			$("#loginForm").appendTo("body");
+
+		});
+
+	});
+
+
+});
